@@ -1,3 +1,6 @@
+# apollo-practice
+apollo-server + koa server와 graphql client를 이용하여 사용법을 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
