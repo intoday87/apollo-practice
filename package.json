@@ -3,13 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"ts-node-dev --transpile-only --project tsconfig.server.json src/server/index.ts\"",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.16",
+    "apollo-server-koa": "^2.24.0",
+    "concurrently": "^6.1.0",
+    "graphql": "^15.5.0",
+    "koa": "^2.13.1",
     "next": "10.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ts-node-dev": "^1.1.6"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/react": "^17.0.5",
+    "typescript": "^4.2.4"
   }
 }
