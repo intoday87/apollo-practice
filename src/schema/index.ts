@@ -28,7 +28,16 @@ export default gql`
         DESCENDING
     }
 
+    type Mutation {
+        postPhoto(
+            name: String!
+            description: String
+            url: String
+        ): Photo!
+    }
+
     schema {
         query: Query
+        mutation: Mutation
     }
 `

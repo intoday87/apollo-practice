@@ -18,6 +18,16 @@ const resolvers: IResolvers = {
             return photos
         }
     },
+    Mutation: {
+        postPhoto: (source, args) => {
+            return {
+                id: '1',
+                name: args.name,
+                description: args.description,
+                url: args.url
+            }
+        }
+    }
 };
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers });
