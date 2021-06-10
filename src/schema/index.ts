@@ -28,12 +28,14 @@ export default gql`
         DESCENDING
     }
 
+    input PostPhotoInput {
+        name: String!
+        description: String
+        url: String
+    }
+
     type Mutation {
-        postPhoto(
-            name: String!
-            description: String
-            url: String
-        ): Photo!
+        postPhoto(input: PostPhotoInput!): Photo!
     }
 
     schema {

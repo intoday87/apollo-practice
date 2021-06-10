@@ -22,9 +22,9 @@ const resolvers: IResolvers = {
         postPhoto: (source, args) => {
             return {
                 id: '1',
-                name: args.name,
-                description: args.description,
-                url: args.url
+                name: args.input?.name,
+                description: args.input?.description,
+                url: args.input?.url
             }
         }
     }
